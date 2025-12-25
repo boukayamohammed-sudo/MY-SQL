@@ -1,3 +1,5 @@
+CREATE database code_db;
+use code_db;
 
 CREATE TABLE Utilisateur (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -10,6 +12,7 @@ CREATE TABLE Article (
   titre VARCHAR(150) NOT NULL,
   contenu TEXT NOT NULL,
   date_pub DATE,
+  
   id_utilisateur INT,
   FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id)
 );
