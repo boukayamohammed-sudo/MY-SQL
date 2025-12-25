@@ -13,7 +13,7 @@ CREATE TABLE Utilisateur (
 CREATE TABLE Article (
   id INT AUTO_INCREMENT PRIMARY KEY,
   titre VARCHAR(150) NOT NULL,
-  contenu TEXT NOT NULL,
+  contenu TEXT NOT NULL,ù
   date_pub DATE,
   id_utilisateur INT,
   FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id)
