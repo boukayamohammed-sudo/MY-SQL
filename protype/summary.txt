@@ -1,0 +1,157 @@
+MCD – Modèle Conceptuel de Données (Blog simple)
+UTILISATEUR
+
+id_utilisateur
+
+nom
+
+email
+
+mot_de_passe
+
+ARTICLE
+
+id_article
+
+titre
+
+contenu
+
+date_pub
+
+COMMENTAIRE
+
+id_commentaire
+
+contenu
+
+auteur
+
+date_commentaire
+
+
+العلاقات (Relations + cardinalités)
+
+UTILISATEUR — écrit — ARTICLE
+
+Utilisateur (1,n) Article
+
+مستخدم واحد يقدر يكتب بزاف ديال المقالات
+
+مقال واحد كيتكتب غير من مستخدم واحد
+
+ARTICLE — a — COMMENTAIRE
+
+Article (1,n) Commentaire
+
+مقال واحد يقدر يكون فيه بزاف ديال التعاليق
+
+تعليق واحد تابع غير لمقال واحد
+
+
+ MLD – Modèle Logique de Données
+
+(تحويل MCD لTables)
+
+ Table UTILISATEUR
+
+id_utilisateur (PK)
+
+nom
+
+email
+
+mot_de_passe
+
+Table ARTICLE
+
+id_article (PK)
+
+titre
+
+contenu
+
+date_pub
+
+id_utilisateur (FK → UTILISATEUR.id_utilisateur)
+
+ Table COMMENTAIRE
+
+id_commentaire (PK)
+
+contenu
+
+auteur
+
+date_commentaire
+
+id_article (FK → ARTICLE.id_article)
+
+ خلاصة قصيرة 
+
+MCD كيبين الكيانات والعلاقات
+
+MLD كيبين الجداول والمفاتيح
+
+العلاقات هي:
+
+Utilisateur → Article (1,n)
+
+Article → Commentaire (1,n)
+
+MLD – Modèle Logique de Données
+Table UTILISATEUR
+
+id_utilisateur (PK)
+
+nom
+
+email
+
+mot_de_passe
+
+ Table ARTICLE
+
+id_article (PK)
+
+titre
+
+contenu
+
+date_pub
+
+id_utilisateur (FK → UTILISATEUR.id_utilisateur)
+
+ Table COMMENTAIRE
+
+id_commentaire (PK)
+
+contenu
+
+auteur
+
+date_commentaire
+
+id_article (FK → ARTICLE.id_article)
+
+خلاصة قصيرة
+
+MCD كيبين الكيانات والعلاقات
+
+MLD كيبين الجداول والمفاتيح
+
+العلاقات هي:
+
+Utilisateur → Article (1,n)
+
+Article → Commentaire (1,n)
+
+
+
+
+
+
+
+
+
+
